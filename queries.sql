@@ -5,7 +5,7 @@ NAME TEXT,
 );
 
 CREATE TABLE chicago_schools (
-Zip Code INT PRIMARY KEY,
+ZIP INT PRIMARY KEY,
 Name of School TEXT,
 );
 
