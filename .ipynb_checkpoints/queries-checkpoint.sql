@@ -1,17 +1,22 @@
 -- Create tables for raw data to be loaded into
-CREATE TABLE libraries (
-ZIP INT PRIMARY KEY,
-NAME TEXT,
+Drop Table if exists new_library;
+Drop Table if exists new_school;
+
+CREATE TABLE new_library (
+    Name TEXT Primary Key,
+    Zip integer
+
 );
 
-CREATE TABLE chicago_schools (
-Zip Code INT PRIMARY KEY,
-Name of School TEXT,
+CREATE TABLE new_school (
+    "School ID" integer,
+    "Name of School" TEXT,
+    "ZIP Code" integer
 );
 
+Select * from new_library;
 
--- Joins tables
-SELECT libraries.ZIP, libraries.NAME, chicago_schools.ZIP, chicago_schools.Name of School
-FROM libraries
-JOIN chicago_schools
-ON libraries.ZIP = chicago_schools.ZIP;
+SELECT s."School ID", s."Name of School", s."ZIP Code", l."Name", l."Zip"
+FROM new_school AS s
+INNER JOIN new_library AS l ON
+s."ZIP Code" = l."Zip";
